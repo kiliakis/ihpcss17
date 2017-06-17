@@ -1,0 +1,162 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer}
+\makeatletter
+\newcommand*{\overlaynumber}{\number\beamer@slideinframe}
+\makeatother
+\mode<presentation> {
+
+%\usetheme{CambridgeUS}
+%\usetheme{Madrid}
+\usetheme{Frankfurt}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{beaver}
+%\usecolortheme{dolphin}
+%\usecolortheme{rose}
+%\usecolortheme{whale}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+
+% Added by me
+\usepackage[backend=bibtex,style=numeric,natbib=true, sorting=none]{biblatex}
+\addbibresource{../references.bib}
+%\AtEveryCitekey{\iffootnote{\color{red}\tiny}{\color{blue}}}
+\usepackage[absolute, overlay]{textpos}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{listings}
+\usepackage{subcaption}
+\usepackage{tabularx}
+\usepackage{listings}
+%\usepackage{parcolumns}
+%\usepackage{enumitem}
+\usepackage[font=scriptsize]{caption}
+%\usepackage{libertine}
+%\definecolor{light sky blue}{HTML}{82CAFA}
+%\setbeamercolor{frametitle}{fg=blue!80!black}
+%\newcommand{\overlaynumber}{\number\beamer@slideinframe}
+%\makeatother
+\newcommand{\code}[1]{\texttt{#1}}
+%\setbeamertemplate{bibliography item}{[\theenumiv]}
+\setbeamertemplate{caption}[numbered]
+\newcommand{\highr}{\textsuperscript{\textregistered}}
+\defbeamertemplate{description item}{align left}{\insertdescriptionitem\hfill}
+\setbeamertemplate{footline}
+{
+	\leavevmode%
+	\hbox{%
+		\begin{beamercolorbox}[wd=.4\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+			\usebeamerfont{author in head/foot}\insertshortauthor
+		\end{beamercolorbox}%
+		\begin{beamercolorbox}[wd=.6\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+			\usebeamerfont{title in head/foot}\insertshorttitle\hspace*{3em}
+			\insertframenumber{} / \inserttotalframenumber\hspace*{1ex}
+	\end{beamercolorbox}}%
+	\vskip0pt%
+}
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[Pipelined MapReduce]{Pipelined MapReduce: A Decoupled MapReduce RunTime for Shared Memory Multi-Processors} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author{Konstantinos ILIAKIS} % Your name
+\institute[NTUA] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+National Technical University of Athens \\ % Your institution for the title page
+\medskip
+\textit{iliakiskostis@gmail.com} % Your email address
+
+\begin{figure}[h]
+	\begin{subfigure}{.3\textwidth}
+		\centering
+		\includegraphics[width=1.0\textwidth]{../Figures/mlab_logo.jpg}
+	\end{subfigure}
+	\hspace{2cm}
+	\begin{subfigure}{.15\textwidth}
+		\centering
+		\includegraphics[width=1.0\textwidth]{../Figures/ntua_logo.jpg}
+	\end{subfigure}
+	
+	%	\par\vspace{10pt}
+	
+%	\caption[Batch Size Effect on Xeon Phi]{Batch Size Effect on Xeon Phi}
+%	\label{fig:phi-batch-sizes}
+\end{figure}
+}
+\date{March 13, 2017} % Date, can be changed to a custom date
+
+\begin{document}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+\begin{frame}
+\frametitle{Table of Contents} % Table of contents slide, comment this block out to remove it
+\tableofcontents
+%\tableofcontents[pausesections] % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+\include{Sections/Section1}
+\include{Sections/Section2}
+\include{Sections/Section3}
+\include{Sections/Section4}
+
+%------------------------------------------------
+
+%\begin{frame}[allowframebreaks]
+%\printbibliography[heading=bibintoc]
+%	\frametitle{References}
+%	\tiny{\bibliographystyle{ieeetr}}
+%	\bibliography{../references}
+%\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Acknowledgements}
+	I would like to thank Professor D. Soudris and Dr. S. Xydis for their guidance and support throughout my thesis.
+	\par\vspace{10pt}
+	\centerline{Thank you all for your attention!}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=.3\textwidth]{../Figures/question_mark.jpg}
+	\end{figure}
+%	\Huge{\centerline{The End}}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

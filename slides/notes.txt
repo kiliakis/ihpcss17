@@ -1,0 +1,6 @@
+* Content similar to that of a paper poster (abstract of research, people/
+  institutions involved, progress to date, findings, future plans)
+* Finally a demo or a visualization
+* Focus on the HPC aspects
+* Brief explanation of domain of science
+* max 5 slides

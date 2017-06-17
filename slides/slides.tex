@@ -102,8 +102,14 @@
 		\lower\logolw\hbox{\pgfuseimage{mlablogo}}%
 		\hspace{0.01cm}
 		\lower\logolw\hbox{\pgfuseimage{smalllogo}}%
-		\hfill\makebox[\footlinetextwd][c]{\insertshortdate}%
+		\hspace{-1cm}
+		\makebox[\footlinetextwd][c]{\insertshortauthor}
+		\hspace{-2.5cm}
+		\makebox[\footlinetextwd][c]{\insertshortdate}%
+		\hspace{-2.5cm}
 		\makebox[\footlinetextwd][c]{\insertshorttitle}%
+		\hspace{-1cm}
+		\hfill
 		\makebox[\numberwd][r]{\insertframenumber}%
 	\end{beamercolorbox}%
 }

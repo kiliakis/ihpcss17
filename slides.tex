@@ -26,13 +26,13 @@
 \setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
 }
 
-
+\usepackage{animate}
 \usepackage{graphicx} % Allows including images
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
 
 % Added by me
 \usepackage[backend=bibtex,style=numeric,natbib=true, sorting=none]{biblatex}
-\addbibresource{../references.bib}
+\addbibresource{references.bib}
 %\AtEveryCitekey{\iffootnote{\color{red}\tiny}{\color{blue}}}
 \usepackage[absolute, overlay]{textpos}
 \usepackage{xcolor}
@@ -107,15 +107,23 @@
 %----------------------------------------------------------------------------------------
 
 %\include{body}
+\begin{frame}{LHC\_Blow-up animation}
+	\animategraphics[loop,autoplay,width=\linewidth]{10}{figures/LHC_Blow-up/LHC_Blow-up-}{0}{89}
+\end{frame}
+  
+\begin{frame}{PS-SPS\_Transfer animation}
+	\animategraphics[loop,autoplay,height=.8\textheight]{8}{figures/PS-SPS_Transfer/PS-SPS_Transfer-}{0}{104}
+\end{frame}
+
 
 %------------------------------------------------
 
-\begin{frame}[allowframebreaks]
-\printbibliography[heading=bibintoc]
-	\frametitle{References}
+%\begin{frame}[allowframebreaks]
+%\printbibliography[heading=bibintoc]
+%	\frametitle{References}
 %	\tiny{\bibliographystyle{ieeetr}}
-	\bibliography{../references}
-\end{frame}
+%	\bibliography{../references}
+%\end{frame}
 
 %------------------------------------------------
 
@@ -126,7 +134,7 @@
 	\centerline{Thank you all for your attention!}
 	\begin{figure}[h]
 		\centering
-		\includegraphics[width=.3\textwidth]{../figures/question_mark.jpg}
+		\includegraphics[width=.3\textwidth]{figures/question_mark.jpg}
 	\end{figure}
 %	\Huge{\centerline{The End}}
 \end{frame}

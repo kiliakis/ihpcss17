@@ -15,11 +15,16 @@
 
 
 \begin{frame}
-	\frametitle{Blond I}
+	\frametitle{BLonD (I)}
+	\begin{textblock}{2}(5,0)
+		\begin{figure}
+			\includegraphics[width=\textwidth]{figures/BLonD_logo_header}
+		\end{figure}
+	\end{textblock}
 	\begin{itemize}
-		\item BLonD -- Beam Longitudinal Dynamics simulator
-		\item Developed in Python with C kernels for the hotspots
-		\item Used at CERN, KEK
+		\item \underline{B}eam \underline{Lon}gitudinal \underline{D}ynamics code simulator
+		\item Developed in Python with C extensions for the computational kernels
+		\item More than ten contributors, numerous users at CERN and KEK-Japan
 	\end{itemize}
 	% What is blond
 	% what research has been conducted with blond, 
@@ -49,16 +54,32 @@
 
 
 \begin{frame}
-	\frametitle{BLond++}
+	\frametitle{BLonD++}
 	% What is blond++, facts and numbers
 	% benchmark comparison with blond
+	{ \small
+	\begin{itemize}
+		\item BLonD++ is the C++ version of BLonD
+		\item Native support for multi-threading, auto-vectorization, compiler optimizations etc
+		\item Proved to perform better in complex simulations
+	\end{itemize}
+	}
+%	\vspace{-10pt}
+	\begin{figure}
+		\hspace{-150pt}	
+		\includegraphics[width=.5\textwidth]{figures/BLonDpp-speedup2}
+	\end{figure}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Future plans + challenges}
+	\frametitle{Future Studies}
 	% Future challenges + plans
 \end{frame}
 
+
+%The Beam Longitudinal Dynamics code BLonD is a unique simulation code developed at CERN in the BE-RF group to model beam motion in synchrotrons. Beam parameters for important upgrades and future studies are based on the results of BLonD simulations. The code is written in a modular fashion, so that the physics content of each simulation can be adapted to special purposes via modules pipelining. The code was originally developed in python and has been now translated to C++ to apply various optimization techniques. The present CERN grid infrastructure restricts the complexity of physics problems that can be modelled due to performance limitations. A dedicated computer architecture is necessary to meet the present and growing future computational needs in the field of longitudinal beam dynamics.
+
+%Given these needs, studying computer architectures and hardware accelerators suitable specifically for complex simulators is essential. The interaction between different modules has to be investigated in detail. Selecting a few representative, physics cases, the feasibility and performance of different combinations of architecture including Xeon Phi, GPU, and FPGA components are to be evaluated. In the first stage, testing on the existing CERN OpenLab and TechLab infrastructures is envisaged. Eventually, prototype hardware acquisition for testing purposes is likely to be necessary. Ideally, the outcome of the PhD thesis will be a proposal for a concrete, dedicated computer architecture that will be purchased and used for longitudinal beam dynamics studies.
 
 
 %\begin{frame}{LHC\_Blow-up animation}

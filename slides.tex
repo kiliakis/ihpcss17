@@ -1,6 +1,7 @@
 
-\documentclass{beamer}
+\documentclass[8pt]{beamer}
 
+\geometry{paperwidth=168mm, paperheight=126mm}
 \makeatletter
 \newcommand*{\overlaynumber}{\number\beamer@slideinframe}
 \makeatother
@@ -54,19 +55,33 @@
 \newcommand{\highr}{\textsuperscript{\textregistered}}
 \defbeamertemplate{description item}{align left}{\insertdescriptionitem\hfill}
 
-\pgfdeclareimage[width=\logowd]{ntualogo}{ntua-logo}
-\pgfdeclareimage[width=\logowd]{mlablogo}{mlab-logo}
+
+%%\newlength{\logowd}
+%\setlength{\logowd}{14.046mm * \ratio{128mm}{254mm}}
+%
+%%\newlength{\logolw}
+%\setlength{\logolw}{\footlinedp - 2.392mm * \ratio{128mm}{254mm}}
+%
+%%\newlength{\footlinetextwd}
+%\setlength{\footlinetextwd}{140pt}
+%
+%%\newlength{\numberwd}
+%\setlength{\numberwd}{20pt}
+
+\pgfdeclareimage[width=1.2\logowd]{smalllogo}{cern-logo}
+\pgfdeclareimage[width=1.2\logowd]{ntualogo}{ntua-logo}
+%\pgfdeclareimage[width=\logowd]{mlablogo}{mlab-logo}
 
 \setbeamertemplate{footline}
 {
-	\begin{beamercolorbox}[wd=\paperwidth,dp=\footlinedp,ht=\footlineht,
+	\begin{beamercolorbox}[wd=\paperwidth,dp=\footlinedp,ht=1.2\footlineht,
 		leftskip=\footlinesk,
 		rightskip=\footlinesk]{footline}%
 		\usebeamerfont{title in head/foot}%
 		\lower\logolw\hbox{\pgfuseimage{ntualogo}}%
 		\hspace{0.01cm}
-		\lower\logolw\hbox{\pgfuseimage{mlablogo}}%
-		\hspace{0.01cm}
+%		\lower\logolw\hbox{\pgfuseimage{mlablogo}}%
+%		\hspace{0.01cm}
 		\lower\logolw\hbox{\pgfuseimage{smalllogo}}%
 		\hspace{-1cm}
 		\makebox[\footlinetextwd][c]{\insertshortauthor}

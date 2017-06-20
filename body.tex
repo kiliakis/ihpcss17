@@ -1,13 +1,22 @@
 
 
 \begin{frame}
-	\frametitle{Abstract}
-	\begin{itemize}
-		\item CERN -- European Organization for Nuclear Research
-		\item Doctoral Student with NTUA as supervising university
-		\item Computer architecture and hard/soft-ware HPC techniques to 
-		accelerate complex simulators
-	\end{itemize}
+%	\frametitle{Abstract}
+%	\framesubtitle{Abstract}
+	\begin{block}{CERN}
+		At CERN -- European Organization for Nuclear Research -- scientists are probing the fundamental structure of the universe. Using the world's largest and most powerful particle accelerators as well the most complex and precise detectors, physicists study the fundamental particle and their interactions.
+	\end{block}
+	\begin{block}{Accelerators}
+		The accelerator complex at CERN is a succession of machines that accelerate beams of particles (mainly protons) to increasingly higher energies, before injecting them into the next machine.
+		
+		The Large Hadron Collider (LHC) is the last machine in this chain and can accelerate particle beams up to a record energy of 6.5 TeV. The beams are then transferred to two oppositely circulating beam pipes and finally collide inside four detectors -- ALICE, ATLAS, CMS and LHCb.
+	\end{block}
+%	\begin{itemize}
+%		\item CERN -- European Organization for Nuclear Research
+%		\item Doctoral Student with NTUA as supervising university
+%		\item Computer architecture and hard/soft-ware HPC techniques to 
+%		accelerate complex simulators
+%	\end{itemize}
 	% What is CERN
 	% What I am doing at CERN
 	% Thesis abstract
@@ -15,17 +24,36 @@
 
 
 \begin{frame}
-	\frametitle{BLonD (I)}
-	\begin{textblock}{2}(5,0)
+%	\frametitle{BLonD (I)}
+%	Details about blond and blond++
+	\begin{textblock}{2}(0,0)
 		\begin{figure}
 			\includegraphics[width=\textwidth]{figures/BLonD_logo_header}
 		\end{figure}
 	\end{textblock}
-	\begin{itemize}
-		\item \underline{B}eam \underline{Lon}gitudinal \underline{D}ynamics code simulator
-		\item Developed in Python with C extensions for the computational kernels
-		\item More than ten contributors, numerous users at CERN and KEK-Japan
-	\end{itemize}
+	\begin{textblock}{2}(2,0)
+		\begin{figure}
+			\includegraphics[width=\textwidth]{figures/python-logo}
+		\end{figure}
+	\end{textblock}
+	\begin{textblock}{2}(4,0)
+	\begin{figure}
+		\includegraphics[width=\textwidth]{figures/cpp-logo}
+	\end{figure}
+	\end{textblock}
+	\vspace{1.5cm}
+	\begin{block}{}
+		The \underline{B}eam \underline{Lon}gitudinal \underline{D}ynamics simulator \footnote{http://blond.web.cerh.ch}  is a unique code developed at CERN to model beam motion in synchrotrons. Important upgrades of beam parameters are based on BLonD simulations. The code is modular and each simulation is composed via pipelining of multiple physics modules. The code is written in Python with C/C++ extensions for the computational kernels.
+		
+		BLonD is an open-source project \footnote{https://github.com/blond-admin/BLonD} with more than 10 contributors and numerous users. Some of the most important conclusions that have been made using BLonD can be found in the literature \footfullcite{timko2015studies} \footfullcite{timko2016benchmarking} \footfullcite{lasheen2015synchrotron}.
+	\end{block}
+	
+
+%	\begin{itemize}
+%		\item \underline{B}eam \underline{Lon}gitudinal \underline{D}ynamics code simulator
+%		\item Developed in Python with C extensions for the computational kernels
+%		\item More than ten contributors, numerous users at CERN and KEK-Japan
+%	\end{itemize}
 	% What is blond
 	% what research has been conducted with blond, 
 	% current users, publications

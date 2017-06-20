@@ -6,7 +6,7 @@
 	\begin{block}{CERN}
 		At CERN -- European Organization for Nuclear Research -- scientists are probing the fundamental structure of the universe. Using the world's largest and most powerful particle accelerators as well the most complex and precise detectors, physicists study the fundamental particle and their interactions.
 	\end{block}
-	\begin{block}{Accelerators}
+	\begin{block}{Accelerator Complex and LHC}
 		The accelerator complex at CERN is a succession of machines that accelerate beams of particles (mainly protons) to increasingly higher energies, before injecting them into the next machine.
 		
 		The Large Hadron Collider (LHC) is the last machine in this chain and can accelerate particle beams up to a record energy of 6.5 TeV. The beams are then transferred to two oppositely circulating beam pipes and finally collide inside four detectors -- ALICE, ATLAS, CMS and LHCb.
@@ -26,17 +26,17 @@
 \begin{frame}
 %	\frametitle{BLonD (I)}
 %	Details about blond and blond++
-	\begin{textblock}{2}(0,0)
+	\begin{textblock}{2}(1,0)
 		\begin{figure}
 			\includegraphics[width=\textwidth]{figures/BLonD_logo_header}
 		\end{figure}
 	\end{textblock}
-	\begin{textblock}{2}(2,0)
+	\begin{textblock}{2}(3,0)
 		\begin{figure}
 			\includegraphics[width=\textwidth]{figures/python-logo}
 		\end{figure}
 	\end{textblock}
-	\begin{textblock}{2}(4,0)
+	\begin{textblock}{2}(5,0)
 	\begin{figure}
 		\includegraphics[width=\textwidth]{figures/cpp-logo}
 	\end{figure}
@@ -47,67 +47,101 @@
 		
 		BLonD is an open-source project \footnote{https://github.com/blond-admin/BLonD} with more than 10 contributors and numerous users. Some of the most important conclusions that have been made using BLonD can be found in the literature \footfullcite{timko2015studies} \footfullcite{timko2016benchmarking} \footfullcite{lasheen2015synchrotron}.
 	\end{block}
-	
-
-%	\begin{itemize}
-%		\item \underline{B}eam \underline{Lon}gitudinal \underline{D}ynamics code simulator
-%		\item Developed in Python with C extensions for the computational kernels
-%		\item More than ten contributors, numerous users at CERN and KEK-Japan
-%	\end{itemize}
-	% What is blond
-	% what research has been conducted with blond, 
-	% current users, publications
 \end{frame}
 
 \begin{frame}
-%	\frametitle{Blond II}
-		\begin{columns}[t]
-			\column{0.7\textwidth}\centering
-			LHC Blow-up\\
+%	\frametitle{Blond in action + short explanation}
+%		\begin{columns}[t]
+%			\column{0.7\textwidth}\centering
+%			LHC Blow-up\\
+		\begin{textblock}{9}(-0.2,0)
 			\begin{figure}[h]
-				\hspace{-12pt}
-				\animategraphics[loop,autoplay, height=.46\textheight] {10} {figures/LHC_Blow-up/LHC_Blow-up-}{0}{0} %89
-				\caption*{Insert caption}
+%				\hspace{-12pt}
+				\animategraphics[loop, autoplay, width=\textwidth] {10} {figures/LHC_Blow-up/LHC_Blow-up-}{0}{0} %89
+%				\caption*{Insert caption}
 			\end{figure}
-			
-			\column{0.46\textwidth}\centering
+		\end{textblock}
+		\begin{textblock}{7.2}(8.8,0)
+			\begin{block}{LHC BLow-Up}
+				In the LHC, maintaining a constant stability threshold requires an increase of the longitudinal emittance as the square-root of energy. This is done by RF phase noise injection that targets the bunch core. 
+%				The noise can either be injected through the phase loop or directly through the cavity; in both cases, 
+				A feedback on the noise amplitude maintains a constant FWHM bunch length.
+%				Simulations reveal that the bunch core becomes rounder during the process, while the tail population remains inside a certain area.
+			\end{block}
+		\end{textblock}
+%			\column{0.46\textwidth}\centering
 %			\vspace{-25pt}
-			PS-SPS Transfer\\
+%			PS-SPS Transfer\\
+		\begin{textblock}{5}(-0.2,7)
 			\begin{figure}[h]
-				\animategraphics[loop,autoplay,height=.48\textheight] {8} {figures/PS-SPS_Transfer/PS-SPS_Transfer-}{0}{0} %104
-				\caption*{Insert caption}
+				\animategraphics[loop, autoplay, width=\textwidth] {8} {figures/PS-SPS_Transfer/PS-SPS_Transfer-}{0}{0} %104
+%				\caption*{Insert caption}
 			\end{figure}
-		\end{columns}
+		\end{textblock}
+		\begin{textblock}{11.2}(4.75,7.5)
+			\begin{block}{PS-to-SPS Transfer}
+				In the PS, the LHC-type 25ns beam is created through a series of RF manipulations. After the injection of 4+2 bunches from the PSB, a triple splitting is performed and the bunches are accelerated. At flat top, each bunch is twice split in two, resulting in 72 bunches. Finally, an adiabatic bunch shortening and a bunch rotation provide bunches that are short enough to be injected into the 200 MHz buckets of the SPS.
+			\end{block}
+		\end{textblock}
+
+%		\end{columns}
 \end{frame}
 
 
 \begin{frame}
-	\frametitle{BLonD++}
+%	\frametitle{BLonD++}
+%	\begin{textblock}{15}(0.5,3)
+	\begin{block}{BLonD++}
+	BLonD++ \footnote{https://github.com/blond-admin/BLonD-cpp} is the C++ version of BLonD. It features openMP multi-threading and auto-vectorization friendly computational kernels. BLonD++ has been proved to perform particularly faster than BLonD on time-consuming, complex simulations.
+	\end{block}
+
+%	\end{textblock}
+%	\begin{textblock}{6}(0,7)
+	\begin{block}{}
+	
+	\begin{columns}[t]
+		\column[t]{0.52\textwidth}
+		\vspace{-1.4cm}
+		\begin{figure}
+			\includegraphics[width=\textwidth]{figures/BLonDpp-speedup2}
+		\end{figure}
+		
+		\column[t]{0.5\textwidth}
+%		\vspace{-0.5cm}
+		Three applications with different levels of complexity. The top Speed-Up achieved in the two less complex applications is up to 3X and 4X respectively. However, the results are different in the most complex case, demonstrating a maximum Speed-Up of 32X. 
+	\end{columns}
+	\end{block}
+%	\end{textblock}
 	% What is blond++, facts and numbers
 	% benchmark comparison with blond
-	{ \small
-	\begin{itemize}
-		\item BLonD++ is the C++ version of BLonD
-		\item Native support for multi-threading, auto-vectorization, compiler optimizations etc
-		\item Proved to perform better in complex simulations
-	\end{itemize}
-	}
+%	{ \small
+%	\begin{itemize}
+%		\item BLonD++ is the C++ version of BLonD
+%		\item Native support for multi-threading, auto-vectorization, compiler optimizations etc
+%		\item Proved to perform better in complex simulations
+%	\end{itemize}
+%	}
 %	\vspace{-10pt}
-	\begin{figure}
-		\hspace{-150pt}	
-		\includegraphics[width=.5\textwidth]{figures/BLonDpp-speedup2}
-	\end{figure}
+%	\begin{figure}
+%		\hspace{-150pt}	
+%		\includegraphics[width=.5\textwidth]{figures/BLonDpp-speedup2}
+%	\end{figure}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Future Studies}
-	% Future challenges + plans
+%	\frametitle{Motivation}
+	\begin{block}{Motivation}
+		The present CERN computing infrastructure is composed of heterogeneous general purpose CPUs (mainly Intel Xeons). The complexity of physics problems that can me modelled is restricted due to runtime limitations. A dedicated computer architecture is necessary to meet the continuously growing computational needs in the field of longitudinal beam dynamics.
+	\end{block}
+
+	\begin{block}{Ongoing Work}
+		Existing high-performance CERN infrastructures and software methods are being explored for their suitability to address performance and scalability issues of BLonD simulations. The interaction between different modules is investigated in detail.
+	\end{block}
+
+	\begin{block}{Future Studies}
+		Eventually, combinations of CPUs and accelerators, including Xeon Phis, GPUs and FPGAs,  will be evaluated. Ideally, the outcome of the thesis will be a concrete proposal for an HPC system to serve the longitudinal beam dynamics studies. 
+	\end{block}
 \end{frame}
-
-
-%The Beam Longitudinal Dynamics code BLonD is a unique simulation code developed at CERN in the BE-RF group to model beam motion in synchrotrons. Beam parameters for important upgrades and future studies are based on the results of BLonD simulations. The code is written in a modular fashion, so that the physics content of each simulation can be adapted to special purposes via modules pipelining. The code was originally developed in python and has been now translated to C++ to apply various optimization techniques. The present CERN grid infrastructure restricts the complexity of physics problems that can be modelled due to performance limitations. A dedicated computer architecture is necessary to meet the present and growing future computational needs in the field of longitudinal beam dynamics.
-
-%Given these needs, studying computer architectures and hardware accelerators suitable specifically for complex simulators is essential. The interaction between different modules has to be investigated in detail. Selecting a few representative, physics cases, the feasibility and performance of different combinations of architecture including Xeon Phi, GPU, and FPGA components are to be evaluated. In the first stage, testing on the existing CERN OpenLab and TechLab infrastructures is envisaged. Eventually, prototype hardware acquisition for testing purposes is likely to be necessary. Ideally, the outcome of the PhD thesis will be a proposal for a concrete, dedicated computer architecture that will be purchased and used for longitudinal beam dynamics studies.
 
 
 %\begin{frame}{LHC\_Blow-up animation}

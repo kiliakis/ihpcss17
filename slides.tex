@@ -83,17 +83,20 @@
 %		\lower\logolw\hbox{\pgfuseimage{mlablogo}}%
 %		\hspace{0.01cm}
 		\lower\logolw\hbox{\pgfuseimage{smalllogo}}%
-		\hspace{-1cm}
-		\makebox[\footlinetextwd][c]{\insertshortauthor}
-		\hspace{-2.5cm}
-		\makebox[\footlinetextwd][c]{\insertshortdate}%
-		\hspace{-2.5cm}
-		\makebox[\footlinetextwd][c]{\insertshorttitle}%
-		\hspace{-1cm}
+%		\hspace{-0.5cm}
+		\makebox[\footlinetextwd][c]{\fontsize{10}{12}\selectfont \insertshortauthor}
+		\hspace{-1.5cm}
+		\makebox[\footlinetextwd][c]{\fontsize{10}{12}\selectfont \insertshortdate}%
+		\hspace{-1.5cm}
+		\makebox[\footlinetextwd][c]{\fontsize{10}{12}\selectfont \insertshorttitle}%
+%		\hspace{-1cm}
 		\hfill
-		\makebox[\numberwd][r]{\insertframenumber}%
-	\end{beamercolorbox}%
+		\makebox[\numberwd][r]{\fontsize{10}{12}\selectfont \insertframenumber}%
+		\hspace{1cm}	
+\end{beamercolorbox}%
 }
+
+%\setbeamerfont{footline}{size=\fontsize{12}{14}\selectfont}
 
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
